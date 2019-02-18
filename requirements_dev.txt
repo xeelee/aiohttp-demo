@@ -1,0 +1,5 @@
+pytest
+pytest-aiohttp
+asynctest
+aioreloader
+freezegun

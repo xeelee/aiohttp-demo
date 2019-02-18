@@ -1,0 +1,9 @@
+{
+    "debug": false,
+    "port": 8008,
+    "mongo_uri": "mongodb://root:toor@mongodb:27017",
+    "mongo_db": "aiohttp_demo",
+    "mongo_collection_users": "users",
+    "mongo_collection_links": "links",
+    "mongo_collection_counter": "counter"
+}

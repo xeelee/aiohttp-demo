@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: ../
+      dockerfile: ./docker/Dockerfile.dev
+    command: python app.py confs/default.json confs/development.json
+    volumes:
+      - ../:/usr/src/app
+    ports:
+      - "8008:8008"
+    depends_on:
+      - mongodb
+  mongodb:
+    image: mongo:latest
+    restart: always
+    container_name: aiohttp-demo-mongodb
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: toor

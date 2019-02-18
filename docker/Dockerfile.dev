@@ -1,0 +1,5 @@
+FROM python:latest
+COPY ./docker/entrypoint.sh /usr/bin/entrypoint
+RUN chmod 755 /usr/bin/entrypoint
+WORKDIR /usr/src/app
+ENTRYPOINT ["entrypoint"]

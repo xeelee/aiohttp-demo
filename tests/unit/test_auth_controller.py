@@ -39,7 +39,8 @@ class TestAuthMiddleware:
                 new=CoroutineMock()) as logout: 
             await controller.middleware(req, handler)
         logout.assert_called_with(req)
-        session_with_user_id_activity['last_activity'] = after_5s.isoformat()
+        assert session_with_user_id_activity['last_activity'] == \
+            after_5s.isoformat()
 
 
 @pytest.fixture

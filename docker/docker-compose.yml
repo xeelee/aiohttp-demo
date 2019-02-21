@@ -13,7 +13,7 @@ services:
     depends_on:
       - mongodb
   mongodb:
-    image: mongo:latest
+    image: mongo:3.4-jessie
     restart: always
     container_name: aiohttp-demo-mongodb
     environment:

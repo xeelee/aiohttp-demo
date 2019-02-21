@@ -1,4 +1,4 @@
-FROM python:latest
+FROM python:3.7-stretch
 COPY ./docker/entrypoint.sh /usr/bin/entrypoint
 RUN chmod 755 /usr/bin/entrypoint
 WORKDIR /usr/src/app

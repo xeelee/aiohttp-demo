@@ -2,5 +2,5 @@ class RepositoryError(Exception):
     pass
 
 
-class Duplicate(RecursionError):
+class Duplicate(RepositoryError):
     pass

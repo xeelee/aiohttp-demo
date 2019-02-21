@@ -106,7 +106,7 @@ class TestUsersResource:
         text = await response.text()
         assert response.status == 403, text
 
-    async def test_update_inexistend(
+    async def test_update_inexistent(
             self, api, inexistent_link_id, logged_user_id):
         data = {
             'is_public': False,

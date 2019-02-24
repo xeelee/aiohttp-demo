@@ -19,8 +19,8 @@ class PaginatedResult:
 
 class MongoPaginator:
 
-    def __init__(self, order_by: str):
-        self._order_by = order_by
+    def __init__(self, order_by: str = '_id'):
+        self._order_by = order_by  # TODO: make related to `start_after`
 
     async def process(
             self, find, query, limit, start_after=None) -> PaginatedResult:

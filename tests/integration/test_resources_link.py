@@ -263,7 +263,7 @@ async def db_links(collection_links, link_data):
 def sorted_db_links(db_links):
     return sorted(
         db_links,
-        key=lambda x: x['updated_at'],
+        key=lambda x: x['_id'],
     )
 
 

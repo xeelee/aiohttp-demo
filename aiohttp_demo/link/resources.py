@@ -8,7 +8,7 @@ from . import schemas as sm
 
 class Link:
 
-    paginator = MongoPaginator('updated_at')
+    paginator = MongoPaginator()
 
     def __init__(
             self, link_repository, auth, url_encoder, uid_generator):

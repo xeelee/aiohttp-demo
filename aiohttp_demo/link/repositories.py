@@ -37,6 +37,5 @@ class LinkRepository(CollectionBase):
     async def configure(self):
         await self._collection.create_index('created_by')
         await self._collection.create_index('shortcut')
-        await self._collection.create_index('updated_at')
         await self._collection.create_index(
             'expires_at', expireAfterSeconds=0)
